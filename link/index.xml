@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Links on 温泉居</title>
-    <link>http://zhaomingxia.com/link/</link>
+    <link>https://zhaomingxia.com/link/</link>
     <description>Recent content in Links on 温泉居</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 01 Aug 2018 23:53:00 +0800</lastBuildDate>
     
-	<atom:link href="http://zhaomingxia.com/link/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhaomingxia.com/link/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>xuhongxu.com</title>
-      <link>http://zhaomingxia.com/link/xhx/</link>
+      <link>https://zhaomingxia.com/link/xhx/</link>
       <pubDate>Wed, 01 Aug 2018 23:53:00 +0800</pubDate>
       
-      <guid>http://zhaomingxia.com/link/xhx/</guid>
+      <guid>https://zhaomingxia.com/link/xhx/</guid>
       <description>IT程序猿旭旭的博客。</description>
     </item>
     
