@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 温泉居</title>
+    <link>https://zhaomingxia.com/tags/</link>
+    <description>Recent content in Tags on 温泉居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://zhaomingxia.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>旭旭</title>
+      <link>https://zhaomingxia.com/tags/%E6%97%AD%E6%97%AD/</link>
+      <pubDate>Wed, 01 Aug 2018 23:53:00 +0800</pubDate>
+      
+      <guid>https://zhaomingxia.com/tags/%E6%97%AD%E6%97%AD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>白鹿原</title>
+      <link>https://zhaomingxia.com/tags/%E7%99%BD%E9%B9%BF%E5%8E%9F/</link>
+      <pubDate>Tue, 21 Aug 2018 18:00:00 +0800</pubDate>
+      
+      <guid>https://zhaomingxia.com/tags/%E7%99%BD%E9%B9%BF%E5%8E%9F/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Author on 温泉居</title>
+    <link>https://zhaomingxia.com/author/</link>
+    <description>Recent content in Author on 温泉居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://zhaomingxia.com/author/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>温泉居士</title>
+      <link>https://zhaomingxia.com/author/%E6%B8%A9%E6%B3%89%E5%B1%85%E5%A3%AB/</link>
+      <pubDate>Tue, 21 Aug 2018 18:00:00 +0800</pubDate>
+      
+      <guid>https://zhaomingxia.com/author/%E6%B8%A9%E6%B3%89%E5%B1%85%E5%A3%AB/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
