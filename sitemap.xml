@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zhaomingxia.com/article/180823%E7%99%BD%E5%AD%9D%E6%96%87/</loc>
+    <lastmod>2018-08-23T18:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhaomingxia.com/article/180822%E7%94%B0%E5%B0%8F%E5%A8%A5/</loc>
+    <lastmod>2018-08-22T18:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhaomingxia.com/article/180821%E5%90%91%E7%99%BD%E5%98%89%E8%BD%A9%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%A4%84%E4%B8%96/</loc>
     <lastmod>2018-08-21T18:00:00+08:00</lastmod>
   </url>
@@ -88,7 +98,7 @@
   
   <url>
     <loc>https://zhaomingxia.com/article/</loc>
-    <lastmod>2018-08-21T18:00:00+08:00</lastmod>
+    <lastmod>2018-08-23T18:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -132,26 +142,20 @@
   </url>
   
   <url>
-    <loc>https://zhaomingxia.com/</loc>
-    <lastmod>2018-08-21T18:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhaomingxia.com/author/%E6%B8%A9%E6%B3%89%E5%B1%85%E5%A3%AB/</loc>
-    <lastmod>2018-08-21T18:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zhaomingxia.com/tags/%E7%99%BD%E9%B9%BF%E5%8E%9F/</loc>
-    <lastmod>2018-08-21T18:00:00+08:00</lastmod>
+    <lastmod>2018-08-23T18:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zhaomingxia.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-08-21T18:00:00+08:00</lastmod>
+    <lastmod>2018-08-23T18:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhaomingxia.com/</loc>
+    <lastmod>2018-08-23T18:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
