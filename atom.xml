@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhaomingxia97.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-10-24T09:11:23.890Z</updated>
+    <title>青崖间</title>
+    <updated>2021-10-24T09:25:57.206Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhaomingxia97.github.io"/>
     <link rel="self" href="https://zhaomingxia97.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>且放白鹿青崖间，须行即骑访名山</subtitle>
     <logo>https://zhaomingxia97.github.io/images/avatar.png</logo>
     <icon>https://zhaomingxia97.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, 青崖间</rights>
+    <entry>
+        <title type="html"><![CDATA[新博客，你好！]]></title>
+        <id>https://zhaomingxia97.github.io/post/xin-bo-ke-ni-hao/</id>
+        <link href="https://zhaomingxia97.github.io/post/xin-bo-ke-ni-hao/">
+        </link>
+        <updated>2021-10-24T09:18:38.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="标题1">标题1</h1>
+<h2 id="标题2">标题2</h2>
+<blockquote>
+<p>这是引文</p>
+</blockquote>
+<ul>
+<li>列表1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+<ol>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ol>
+<p>这是<strong>加粗</strong></p>
+<p><em>倾斜</em></p>
+]]></content>
+    </entry>
 </feed>
