@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhaomingxia97.github.io</id>
     <title>青崖间</title>
-    <updated>2021-10-24T15:08:21.378Z</updated>
+    <updated>2021-10-25T15:38:14.777Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhaomingxia97.github.io"/>
     <link rel="self" href="https://zhaomingxia97.github.io/atom.xml"/>
@@ -10,6 +10,24 @@
     <logo>https://zhaomingxia97.github.io/images/avatar.png</logo>
     <icon>https://zhaomingxia97.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 青崖间</rights>
+    <entry>
+        <title type="html"><![CDATA[分享一个思维导图的软件]]></title>
+        <id>https://zhaomingxia97.github.io/post/fen-xiang-yi-ge-si-wei-dao-tu-de-ruan-jian/</id>
+        <link href="https://zhaomingxia97.github.io/post/fen-xiang-yi-ge-si-wei-dao-tu-de-ruan-jian/">
+        </link>
+        <updated>2021-10-25T15:16:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="成片文字思维导图">成片文字？思维导图</h1>
+<p>拿到成片的文字，我们总会感到头疼，下意识地不想去读；但是如果我们拿到一个思维导图，我们就会很乐意去理解它，这符合我们大脑的认知规律。经常我们的大脑有很多乱七八糟的想法，你有的时候会感到很苦恼，似乎怎么想都想不清楚，但如果我们能够用思维导图来进行整理，我们的思绪就能一下子拥有一定的条理。可以说思维导图是一个工具，一个能够理清你大脑纷乱思绪的工具。</p>
+<h1 id="mindnode">MindNode</h1>
+<p>我今天使用来这个小工具来整理我的心情，理清了我觉得心烦意乱的种种原因，当我把我的思绪用思维导图的形式整理清楚之后，我发现我烦躁不安的情绪也得到了很大的缓解，原来思维导图还可以作为减压工具使用呢！我今天使用这个思维导图软件的初步体验非常好，界面简洁清爽，操作简单流畅，源文件可以直接保存在软件内部，非常方便，因此十分推荐大家使用。下面告诉大家使用这一软件的几个实用小技巧：</p>
+<ol>
+<li>回车键：同一层级添加</li>
+<li>tab键：大的层级添加小的层级；选中文本框，然后使用键盘的上下左右键便可以不使用鼠标在各种层级间任意切换</li>
+<li>选中文本框可以拖动更改位置</li>
+</ol>
+<p>掌握以上小知识，你就已经可以比较轻松地在电脑上制作思维导图了！希望大家都可以将这一工具充分利用起来，以提高自己的思维品质和生产力！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[制作你的第一条小视频]]></title>
         <id>https://zhaomingxia97.github.io/post/zhi-zuo-ni-de-di-yi-tiao-xiao-shi-pin/</id>
