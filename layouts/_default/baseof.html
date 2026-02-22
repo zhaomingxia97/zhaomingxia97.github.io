@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d5a27;
+            --primary-light: #e8f5e9;
+            --secondary: #2c3e50;
+            --accent: #f39c12;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --radius: 16px;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            background: linear-gradient(135deg, #f6ffea 0%, #e0f2fe 50%, #fefce8 100%);
+            color: var(--text-main);
+            line-height: 1.5;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .container.card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 3.5rem 2.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
+
+        .content {
+            font-size: 1.05rem;
+        }
+
+        .content h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-light);
+            letter-spacing: -0.01em;
+        }
+
+        .content h2:first-of-type {
+            margin-top: 1rem;
+        }
+
+        .content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 2rem 0 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content h3::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .content p {
+            margin-bottom: 1.25rem;
+            color: #374151;
+        }
+
+        .content ul, .content ol {
+            margin: 1.5rem 0 1.5rem 1.75rem;
+            padding-left: 1.25rem;
+        }
+
+        .content li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 0.5rem;
+        }
+
+        .content li::marker {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .content strong {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .content em {
+            color: var(--accent);
+        }
+
+        .content blockquote {
+            background: linear-gradient(135deg, var(--primary-light), #f0f9ff);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem 1.75rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            position: relative;
+            font-style: italic;
+        }
+
+        .content blockquote::before {
+            content: '"';
+            position: absolute;
+            left: 1rem;
+            top: 0.5rem;
+            font-size: 3rem;
+            color: var(--primary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .content blockquote p {
+            margin-bottom: 0;
+            color: var(--secondary);
+        }
+
+        .content table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .content thead {
+            background: linear-gradient(135deg, var(--primary), #1e4620);
+        }
+
+        .content th {
+            color: white;
+            font-weight: 600;
+            padding: 1rem;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        .content tbody tr {
+            border-bottom: 1px solid #e5e7eb;
+            transition: background 0.2s ease;
+        }
+
+        .content tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .content tbody tr:hover {
+            background: var(--primary-light);
+        }
+
+        .content td {
+            padding: 1rem;
+            color: #374151;
+        }
+
+        .content td:first-child {
+            font-weight: 500;
+            color: var(--secondary);
+        }
+
+        .content hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+            margin: 3rem 0;
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .meta::before {
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            border-radius: 1px;
+        }
+
+        .medium-box, .youtube-box {
+            background: linear-gradient(135deg, #fef3c7, #fffbeb);
+            border: 1px solid #fcd34d;
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .youtube-box {
+            background: linear-gradient(135deg, #fef2f2, #fff1f2);
+            border-color: #fca5a5;
+        }
+
+        .medium-box a, .youtube-box a {
+            color: #92400e;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.2s ease;
+        }
+
+        .youtube-box a {
+            color: #991b1b;
+        }
+
+        .medium-box a:hover, .youtube-box a:hover {
+            transform: translateX(4px);
+        }
+
+        .tags {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-light), #dbeafe);
+            color: var(--secondary);
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            .container.card {
+                padding: 2rem 1.5rem;
+            }
+
+            .content h1 {
+                font-size: 1.75rem;
+            }
+
+            .content h2 {
+                font-size: 1.3rem;
+            }
+
+            .content {
+                font-size: 1rem;
+            }
+
+            .content table {
+                font-size: 0.9rem;
+            }
+
+            .content th, .content td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+    {{ block "styles" . }}{{ end }}
+</head>
+<body>
+    <div class="container{{ if not .IsHome }} card{{ end }}">
+        {{ block "main" . }}{{ end }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+baseURL = 'https://mia-mandarin.github.io/'
+languageCode = 'en-us'
+title = 'Mia Mandarin Toolbox'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
