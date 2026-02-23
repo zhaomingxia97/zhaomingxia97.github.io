@@ -1,7 +1,7 @@
 ---
 title: "Stop Pronouncing Third Tones Wrong: The Ultimate Guide to Chinese Tone Sandhi"
 date: 2026-02-22
-tags: ["third tone", "sandhi", "pronunciation", "youtube"]
+tags: [tones, sandhi, pronunciation, intermediate, youtube]
 youtube:
   - "https://www.youtube.com/shorts/SB6G_PvkSm8"
   - "https://www.youtube.com/shorts/Z0Z_d7UxxQc"

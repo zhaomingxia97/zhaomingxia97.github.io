@@ -1,7 +1,7 @@
 ---
 title: "Mastering the Tone Sandhi Rules of 不 (bù)"
 date: 2026-02-22
-tags: ["tones", "sandhi", "bu", "negation"]
+tags: [tones, sandhi, grammar, beginner, youtube]
 youtube: "https://www.youtube.com/shorts/1KA_3DZFS3M"
 ---
 

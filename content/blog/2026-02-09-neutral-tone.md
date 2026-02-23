@@ -1,7 +1,7 @@
 ---
 title: "Stop Sounding Like a Robot: The Secret to Mastering the Chinese Neutral Tone"
 date: 2026-02-09
-tags: [neutral tone, qingsheng, pronunciation, flow]
+tags: [tones, pronunciation, beginner, medium]
 categories: [Pronunciation, Tones]
 medium: https://medium.com/@mia.mandarin/stop-sounding-like-a-robot-the-secret-to-mastering-the-chinese-neutral-tone-567fbb556b54
 ---

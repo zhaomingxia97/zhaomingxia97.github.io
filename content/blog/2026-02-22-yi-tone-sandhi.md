@@ -1,7 +1,7 @@
 ---
 title: "Mastering the 4 Faces of 'One' (一) in Chinese"
 date: 2026-02-22
-tags: [tones, sandhi, yi, numbers]
+tags: [tones, sandhi, numbers, beginner, youtube]
 youtube: "https://www.youtube.com/shorts/K4x9WO-rEyc"
 ---
 
