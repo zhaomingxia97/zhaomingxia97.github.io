@@ -57,6 +57,17 @@
         </div>
         {{ end }}
 
+        {{ with .Params.youtube_urls }}
+        <div class="youtube-box">
+            {{ $urls := . }}
+            {{ range $index, $url := $urls }}
+            <a href="{{ $url }}" target="_blank">
+                📹 <strong>Watch on YouTube {{ if gt (len $urls) 1 }}{{ add $index 1 }}{{ end }}:</strong> Check out the video tutorial for pronunciation examples
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+
         {{ with .Params.youtube }}
         <div class="youtube-box">
             <a href="{{ . }}" target="_blank">
