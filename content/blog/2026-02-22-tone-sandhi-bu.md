@@ -2,7 +2,7 @@
 title: "Mastering the Tone Sandhi Rules of 不 (bù)"
 date: 2026-02-22
 tags: ["tones", "sandhi", "bu", "negation"]
-youtube_url: "https://www.youtube.com/shorts/1KA_3DZFS3M"
+youtube: "https://www.youtube.com/shorts/1KA_3DZFS3M"
 ---
 
 In Chinese, the word **不 (bù)** is one of the most common words you'll encounter. It means "not," "no," or "don't," and it is essential for negation. However, if you've been listening closely to native speakers, you might have noticed something strange: its tone isn't always the same!
