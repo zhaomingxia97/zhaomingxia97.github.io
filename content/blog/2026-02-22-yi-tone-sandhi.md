@@ -11,7 +11,7 @@ In Mandarin Chinese, the character **一** is a bit of a chameleon. Depending on
 
 Let’s break them down so you can sound like a native speaker!
 
-### Rule 1: The Original Tone (yī)
+## Rule 1: The Original Tone (yī)
 
 The first pronunciation is the standard high-level tone: **yī**. This is the "dictionary" version of the word. We use this pronunciation when the number stands alone or is used in a specific sequence.
 
@@ -25,7 +25,7 @@ The first pronunciation is the standard high-level tone: **yī**. This is the "d
 - **Ordinal:** 第一名 (dì-**yī** míng) - First place<br>
 - **Address:** 十一楼 (shí-**yī** lóu) - 11th floor
 
-### Rule 2: Before a 4th Tone (yí)
+## Rule 2: Before a 4th Tone (yí)
 
 When **一** is followed by a word that already has a 4th tone (the falling tone), it changes to a 2nd tone (the rising tone): **yí**. This prevents you from having to do two sharp "drops" in a row, which can be tiring for your voice!
 
@@ -33,7 +33,7 @@ When **一** is followed by a word that already has a 4th tone (the falling tone
 - **I will definitely not be late:** 我一定不会迟到 (Wǒ **yí** dìng bú huì chí dào).<br>
   *Notice:* It is **yí dìng**, not **yī dìng**.
 
-### Rule 3: Before 1st, 2nd, or 3rd Tones (yì)
+## Rule 3: Before 1st, 2nd, or 3rd Tones (yì)
 
 If **一** is followed by almost any other tone (the 1st, 2nd, or 3rd), it changes to the 4th tone (the falling tone): **yì**.
 
@@ -42,7 +42,7 @@ If **一** is followed by almost any other tone (the 1st, 2nd, or 3rd), it chang
 - **yì tiáo** (一条) - One (long thin object)<br>
 - **yì běn** (一本) - One (book)
 
-### Rule 4: The Special "Radio" Use (yāo)
+## Rule 4: The Special "Radio" Use (yāo)
 
 The last pronunciation is a special case: **yāo**. This isn't a tone change, but a complete syllable swap! This is used specifically to avoid confusion between the number "one" (**yī**) and the number "seven" (**qī**), which sound very similar over the phone or in noisy environments.
 
@@ -56,7 +56,7 @@ The last pronunciation is a special case: **yāo**. This isn't a tone change, bu
 
 ---
 
-### Quick Reference Table
+## Quick Reference Table
 
 | Pronunciation | Tone | Usage | Example |
 | :--- | :--- | :--- | :--- |
@@ -67,7 +67,7 @@ The last pronunciation is a special case: **yāo**. This isn't a tone change, bu
 
 ---
 
-### 💡 Memory Trick
+## 💡 Memory Trick
 
 Need a quick way to remember? Try this phrase:
 > "Standalone stays **High** (**yī**),<br>
@@ -77,7 +77,7 @@ Need a quick way to remember? Try this phrase:
 
 ---
 
-### Practice Challenge
+## Practice Challenge
 
 Can you figure out how to pronounce all the "ones" in this tricky sentence?
 
@@ -89,7 +89,7 @@ Think about the rules above before scrolling down!
 
 ---
 
-### The Answer
+## The Answer
 
 Here is how a native speaker would say it:
 
@@ -104,7 +104,7 @@ Here is how a native speaker would say it:
 
 ---
 
-### Practice Tips
+## Practice Tips
 
 1. **Don't overthink it:** While learning the rules is important, native speakers do this automatically to make speaking easier. With enough listening practice, your ears will start to expect the change.
 2. **Focus on Measure Words:** Most of your **yì** and **yí** usage will happen with measure words. Practice saying "yí gè" (一个) and "yì zhāng" (一张) until they feel like single words.
