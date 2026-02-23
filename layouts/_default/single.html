@@ -36,7 +36,7 @@
 {{ end }}
 
 {{ define "main" }}
-    <a href="{{ site.BaseURL }}/blog" class="back-link">← Back to Home</a>
+    {{ partial "nav.html" . }}
 
     <article>
         <h1>{{ .Title }}</h1>

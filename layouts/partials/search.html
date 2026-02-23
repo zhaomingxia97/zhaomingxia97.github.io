@@ -1,0 +1,6 @@
+{{- $pages := where site.RegularPages "Kind" "page" -}}
+{{- $searchData := slice -}}
+{{- range $pages -}}
+  {{- $searchData = $searchData | append (dict "title" .Title "content" .Plain "permalink" .Permalink "date" (.Date | time.Format "2006-01-02")) -}}
+{{- end -}}
+{{- $searchData | jsonify -}}

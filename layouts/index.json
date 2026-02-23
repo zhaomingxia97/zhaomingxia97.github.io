@@ -1,0 +1,11 @@
+{{- $pages := where site.RegularPages "Section" "blog" -}}
+{{- $searchData := slice -}}
+{{- range $pages -}}
+  {{- $item := dict "title" .Title "content" .Plain "permalink" .Permalink -}}
+  {{- $item = merge $item (dict "date" (.Date | time.Format "2006-01-02")) -}}
+  {{- with .Params.tags -}}
+    {{- $item = merge $item (dict "tags" .) -}}
+  {{- end -}}
+  {{- $searchData = $searchData | append $item -}}
+{{- end -}}
+{{- $searchData | jsonify -}}

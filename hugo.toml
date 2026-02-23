@@ -6,3 +6,13 @@ title = 'Mia Mandarin Toolbox'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[outputs]
+  home = ["HTML", "JSON"]
+
+[outputFormats]
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    baseName = "search"
+    isPlainText = true
+    notAlternative = true

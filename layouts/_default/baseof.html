@@ -84,6 +84,35 @@
             transform: translateX(-4px);
         }
 
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.875rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-link:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
         .content {
             font-size: 1.05rem;
         }
