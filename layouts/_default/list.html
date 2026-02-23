@@ -154,7 +154,12 @@
             </div>
             {{ end }}
             {{ with .Params.youtube }}
+            {{ if reflect.IsSlice . }}
+                {{ $firstUrl := index . 0 }}
+                <a href="{{ $firstUrl }}" class="youtube-link" target="_blank">📹 Watch Video Tutorial</a>
+            {{ else }}
             <a href="{{ . }}" class="youtube-link" target="_blank">📹 Watch Video Tutorial</a>
+            {{ end }}
             {{ else with .Params.medium }}
             <a href="{{ . }}" class="youtube-link" target="_blank">📝 Read on Medium</a>
             {{ end }}
