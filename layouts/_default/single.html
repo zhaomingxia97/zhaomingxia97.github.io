@@ -70,9 +70,17 @@
 
         {{ with .Params.youtube }}
         <div class="youtube-box">
+            {{ if reflect.IsSlice . }}
+                {{ range $index, $url := . }}
+                <a href="{{ $url }}" target="_blank">
+                    📹 <strong>Watch on YouTube {{ if gt (len .) 1 }}{{ add $index 1 }}{{ end }}:</strong> Check out the video tutorial for pronunciation examples
+                </a>
+                {{ end }}
+            {{ else }}
             <a href="{{ . }}" target="_blank">
                 📹 <strong>Watch on YouTube:</strong> Check out the video tutorial for pronunciation examples
             </a>
+            {{ end }}
         </div>
         {{ end }}
 
