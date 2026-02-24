@@ -90,6 +90,17 @@
         color: var(--text-muted);
     }
 
+    .card-tip {
+        font-size: 0.8rem;
+        color: var(--primary);
+        margin-top: auto;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding-top: 0.5rem;
+    }
+
     .social-links {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -237,15 +248,18 @@
         <div class="card-icon">📝</div>
         <div class="card-title">Homework Helper</div>
         <div class="card-desc">Create worksheets, practice sheets, and manage student assignments.</div>
+        <div class="card-tip">💡 Need to install and run a local server to use.</div>
     </a>
     <a href="{{ "/prep/" | relURL }}" class="card">
         <div class="card-icon">🎓</div>
         <div class="card-title">Lesson Prep</div>
         <div class="card-desc">Streamline your teaching with automated lesson plan generation and materials.</div>
+        <div class="card-tip">💡 Need to install and run a local server to use.</div>
     </a>
 </div>
 
 <footer>
+    <p style="margin-bottom: 0.5rem; color: var(--secondary);">Business Collaboration & Inquiries: <strong>mia.learnmandarin🌀gmail.com</strong></p>
     <p>&copy; 2026 Mia Mandarin. Happy Learning! 🌱</p>
 </footer>
 
