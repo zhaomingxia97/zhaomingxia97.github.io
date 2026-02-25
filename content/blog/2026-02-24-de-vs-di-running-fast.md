@@ -115,7 +115,7 @@ Here's a simple way to remember:
 | **Before** verb | **地** | Adverb (manner) | "地" is the **ground** you run on (sets the scene) |
 
 Or think of it this way:
-- **得** = "got" → What did you "get" from the action? (The result)<br>
+- **得** = "got" → What did you "get" from the action? (The result)
 - **地** = "ground" → What's the "ground" like before you run? (The manner)
 
 ---
@@ -124,20 +124,20 @@ Or think of it this way:
 
 ### Mistake 1: Using "的" instead of "得" or "地"
 
-❌ 跑**的**很快
+❌ 跑**的**很快<br>
 ✅ 跑**得**很快
 
-❌ 很快**的**跑
+❌ 很快**的**跑<br>
 ✅ 很快**地**跑
 
 **Remember:** "的" is for nouns (possession/modification), not for verbs!
 
 ### Mistake 2: Confusing the positions
 
-❌ 很快跑得
+❌ 很快跑得<br>
 ✅ 跑得很快
 
-❌ 跑很快地
+❌ 跑很快地<br>
 ✅ 很快地跑
 
 ---
@@ -183,7 +183,7 @@ Fill in the blanks with 得 or 地:
 The difference between **得** and **地** might seem small, but mastering it will make your Chinese sound much more natural. 
 
 Remember:
-- **得** looks **back** at the action (What was the result?)<br>
+- **得** looks **back** at the action (What was the result?)
 - **地** looks **forward** at the action (How will it be done?)
 
 Next time you're unsure, just ask yourself: **"Am I describing the result, or setting the manner?"**
