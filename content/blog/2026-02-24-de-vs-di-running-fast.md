@@ -115,7 +115,7 @@ Here's a simple way to remember:
 | **Before** verb | **地** | Adverb (manner) | "地" is the **ground** you run on (sets the scene) |
 
 Or think of it this way:
-- **得** = "got" → What did you "get" from the action? (The result)
+- **得** = "got" → What did you "get" from the action? (The result)<br>
 - **地** = "ground" → What's the "ground" like before you run? (The manner)
 
 ---
@@ -183,7 +183,7 @@ Fill in the blanks with 得 or 地:
 The difference between **得** and **地** might seem small, but mastering it will make your Chinese sound much more natural. 
 
 Remember:
-- **得** looks **back** at the action (What was the result?)
+- **得** looks **back** at the action (What was the result?)<br>
 - **地** looks **forward** at the action (How will it be done?)
 
 Next time you're unsure, just ask yourself: **"Am I describing the result, or setting the manner?"**
