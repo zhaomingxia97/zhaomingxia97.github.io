@@ -60,7 +60,7 @@ Learners often swap the positions or use the wrong "vibe." Here are some classic
 **Mistake 1: Wrong Position**
 *   ❌ 我累**有点儿**。 (Wǒ lèi yǒudiǎnr.)
 *   ✅ 我**有点儿**累。 (Wǒ yǒudiǎnr lèi.)
-*   *Note: If the feeling is "before" you, use 有点儿.*
+*   *Note: 有点儿 always comes BEFORE the adjective/verb in the sentence.*
 
 **Mistake 2: Using 有点儿 for positive things**
 *   ❌ 我**有点儿**高兴。 (Wǒ yǒudiǎnr gāoxìng.)
