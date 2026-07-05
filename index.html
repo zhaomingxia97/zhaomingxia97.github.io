@@ -624,12 +624,6 @@
         transform: translateY(-2px);
     }
 
-    .hero-note {
-        margin-top: 1rem;
-        color: #6d776f;
-        font-size: 0.92rem;
-    }
-
     .profile-card {
         position: relative;
         border: 1px solid rgba(31, 61, 43, 0.13);
@@ -650,7 +644,7 @@
 
     .profile-video {
         position: relative;
-        min-height: 350px;
+        aspect-ratio: 16 / 9;
         border-radius: 22px;
         background:
             linear-gradient(145deg, rgba(50, 99, 67, 0.95), rgba(31, 61, 43, 0.96)),
@@ -669,6 +663,50 @@
         object-fit: cover;
         display: block;
         background: var(--sage-dark);
+    }
+
+    .profile-socials {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .profile-social-link {
+        width: 42px;
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid rgba(31, 61, 43, 0.1);
+        background: white;
+        color: var(--sage-dark);
+        box-shadow: 0 10px 24px rgba(31, 61, 43, 0.1);
+        transition: all 0.2s ease;
+    }
+
+    .profile-social-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 30px rgba(31, 61, 43, 0.16);
+    }
+
+    .profile-social-link svg {
+        width: 22px;
+        height: 22px;
+        display: block;
+    }
+
+    .profile-social-link.youtube {
+        color: #ff0033;
+    }
+
+    .profile-social-link.instagram {
+        color: #c13584;
+    }
+
+    .profile-social-link.tiktok {
+        color: #111111;
     }
 
     .profile-details {
@@ -903,17 +941,92 @@
 
     .booking-grid {
         display: grid;
-        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-        gap: 1.25rem;
-        align-items: stretch;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .booking-copy {
-        padding-right: 1rem;
+        padding-right: 0;
+        max-width: none;
+    }
+
+    .booking-paths {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.75rem;
+    }
+
+    .booking-path-card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 1.25rem;
+        box-shadow: 0 16px 40px rgba(31, 61, 43, 0.07);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .booking-path-card.featured {
+        background: var(--sage-soft);
+        border-color: rgba(50, 99, 67, 0.2);
+    }
+
+    .booking-path-label {
+        display: block;
+        color: var(--gold);
+        font-size: 0.74rem;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 0.65rem;
+    }
+
+    .booking-path-card h3 {
+        color: var(--sage-dark);
+        font-size: 1.25rem;
+        line-height: 1.2;
+        margin-bottom: 0.6rem;
+    }
+
+    .booking-path-card p {
+        color: var(--soft-ink);
+        line-height: 1.65;
+        margin-bottom: 1rem;
+    }
+
+    .booking-path-card .button {
+        margin-top: auto;
     }
 
     .booking-panel {
         padding: 1.5rem;
+        scroll-margin-top: 6rem;
+    }
+
+    .booking-panel.is-highlighted {
+        animation: booking-panel-pulse 1.4s ease-out;
+    }
+
+    @keyframes booking-panel-pulse {
+        0% {
+            border-color: rgba(214, 147, 47, 0.9);
+            box-shadow: 0 0 0 0 rgba(214, 147, 47, 0.38), 0 16px 40px rgba(31, 61, 43, 0.07);
+            background: #fffaf1;
+        }
+
+        45% {
+            border-color: rgba(214, 147, 47, 0.9);
+            box-shadow: 0 0 0 12px rgba(214, 147, 47, 0), 0 20px 48px rgba(31, 61, 43, 0.12);
+            background: var(--gold-soft);
+        }
+
+        100% {
+            border-color: var(--line);
+            box-shadow: 0 16px 40px rgba(31, 61, 43, 0.07);
+            background: var(--paper);
+        }
     }
 
     .booking-panel h3 {
@@ -928,58 +1041,22 @@
         margin-bottom: 1rem;
     }
 
-    .booking-list {
-        display: grid;
-        gap: 0.7rem;
-        margin: 1.25rem 0;
-        padding: 0;
-        list-style: none;
+    .private-lesson-button {
+        cursor: pointer;
+        font-family: inherit;
     }
 
-    .booking-list li {
-        display: flex;
-        gap: 0.65rem;
-        align-items: flex-start;
-        color: var(--soft-ink);
-    }
-
-    .booking-list li::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        margin-top: 0.55rem;
-        background: var(--gold);
-        flex: 0 0 auto;
-    }
-
-    .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.65rem;
-        margin-top: 1.4rem;
-    }
-
-    .social-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 40px;
-        padding: 0.65rem 0.9rem;
-        border-radius: 999px;
+    .cal-inline-shell {
+        width: 100%;
         border: 1px solid var(--line);
-        color: var(--sage-dark);
+        border-radius: 8px;
         background: white;
-        text-decoration: none;
-        font-weight: 800;
-        font-size: 0.9rem;
-        transition: all 0.2s ease;
+        box-shadow: 0 16px 40px rgba(31, 61, 43, 0.07);
     }
 
-    .social-link:hover {
-        border-color: var(--sage);
-        background: var(--sage-soft);
-        transform: translateY(-2px);
+    #my-cal-inline-trial {
+        width: 100%;
+        overflow: visible;
     }
 
     .tools-section {
@@ -1050,8 +1127,7 @@
             justify-content: flex-start;
         }
 
-        .hero,
-        .booking-grid {
+        .hero {
             grid-template-columns: 1fr;
             gap: 2rem;
         }
@@ -1098,14 +1174,11 @@
             font-size: 1.05rem;
         }
 
-        .profile-video {
-            min-height: 300px;
-        }
-
         .profile-details,
         .lesson-grid,
         .method-grid,
         .review-grid,
+        .booking-paths,
         .tool-grid {
             grid-template-columns: 1fr;
         }
@@ -1133,11 +1206,9 @@
             </a>
             <nav class="nav-links" aria-label="Primary navigation">
                 <a href="#lessons" class="nav-link">Lessons</a>
+                <a href="#results" class="nav-link">Reviews</a>
                 <a href="#approach" class="nav-link">Approach</a>
-                <a href="#book" class="nav-link">Book</a>
-                <a href="#tools" class="nav-link">Tools</a>
-                <a href="https://www.youtube.com/@mia.mandarin/shorts" class="nav-link" target="_blank" rel="noopener">YouTube</a>
-                <a href="#book" class="nav-link nav-cta">Book a trial</a>
+                <a href="#book" class="nav-link nav-cta">Book a Lesson</a>
             </nav>
         </div>
     </header>
@@ -1148,24 +1219,42 @@
                 <div class="eyebrow">PERSONALIZED ONLINE MANDARIN LESSONS</div>
                 <h1>Make sense of<br>Mandarin.<br>Make it your own.</h1>
                 <p class="hero-copy">
-                    Personalized online lessons that combine clear structure, precise pronunciation, and real conversation
-                    — so you can understand what you're learning and use it with confidence.
+                    Build clear pronunciation, useful sentences, and real confidence with private Mandarin lessons
+                    shaped around your goals.
                 </p>
                 <div class="hero-actions">
-                    <a href="#book" class="button button-primary">Book your trial lesson</a>
-                    <a href="#lessons" class="button button-secondary">Choose your learning path</a>
+                    <a href="#book" class="button button-primary">Book a trial lesson</a>
                 </div>
-                <p class="hero-note">Start with a trial lesson: level check, mini lesson, and a simple study plan for your goals.</p>
             </div>
 
             <aside class="profile-card" aria-label="Mia Zhao teacher profile">
                 <div class="profile-video">
                     <iframe
-                        src="https://www.youtube.com/embed/_5T2m0E74RM?rel=0"
+                        src="https://www.youtube.com/embed/_5T2m0E74RM?rel=0&controls=1&modestbranding=1&playsinline=1"
                         title="Mia Zhao introduction video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
                     </iframe>
+                </div>
+                <div class="profile-socials" aria-label="Social media links">
+                    <a href="https://www.youtube.com/@miazhaomandarin" class="profile-social-link youtube" target="_blank" rel="noopener" aria-label="Mia Zhao on YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1A31.5 31.5 0 0 0 2 12a31.5 31.5 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 22 12a31.5 31.5 0 0 0-.4-4.8z"/>
+                            <path fill="white" d="M10 15.4V8.6l5.8 3.4L10 15.4z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/miazhaomandarin" class="profile-social-link instagram" target="_blank" rel="noopener" aria-label="Mia Zhao on Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="3.7" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="17" cy="7" r="1.2" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@mia.learnmandarin" class="profile-social-link tiktok" target="_blank" rel="noopener" aria-label="Mia Zhao on TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M16.6 3.4c.5 2.2 1.8 3.5 4 3.8v3.1a7 7 0 0 1-3.9-1.2v6.3c0 3.3-2.2 5.5-5.4 5.5-3 0-5.3-1.9-5.3-4.7 0-3 2.4-4.9 5.8-4.9.4 0 .7 0 1 .1v3.1a4 4 0 0 0-1.2-.2c-1.4 0-2.4.7-2.4 1.8 0 1.1.9 1.8 2.1 1.8 1.4 0 2.2-.8 2.2-2.5V3.4h3.1z"/>
+                        </svg>
+                    </a>
                 </div>
                 <div class="profile-details">
                     <div class="mini-stat">
@@ -1182,20 +1271,20 @@
                     </div>
                 </div>
                 <ul class="credential-list">
-                    <li>B.A. in Chinese Language and Literature from Beijing Normal University.</li>
-                    <li>Mandarin Proficiency Test Level 1-B, plus certified high school Chinese teacher credentials.</li>
-                    <li>Advanced English speaker, able to guide complete beginners clearly in English.</li>
+                    <li>B.A. in Chinese Language and Literature, Beijing Normal University.</li>
+                    <li>Mandarin Proficiency Test Level 1-B; certified high school Chinese teacher.</li>
+                    <li>Clear English support for complete beginners.</li>
                 </ul>
             </aside>
         </section>
 
         <section class="section" id="lessons">
             <div class="section-heading">
-                <p class="section-label">Lesson options</p>
-                <h2>Choose the path that matches why you are learning.</h2>
+                <p class="section-label">Lessons</p>
+                <h2>Private Mandarin lessons for your goals.</h2>
                 <p class="section-intro">
-                    Whether you are starting from zero or trying to sound more natural, lessons are built around useful output:
-                    speaking, listening, pronunciation, and sentences you can reuse.
+                    Start from zero, improve conversation, or prepare for a specific goal. Every class gives you
+                    clear practice and usable Chinese.
                 </p>
             </div>
 
@@ -1203,33 +1292,33 @@
                 <article class="lesson-card">
                     <div class="number">Option 01</div>
                     <h3>Foundation Mandarin</h3>
-                    <p>For beginners who want a calm, organized start with pinyin, tones, core grammar, and daily conversation.</p>
+                    <p>Start with pinyin, tones, core grammar, and everyday sentences you can use right away.</p>
                     <ul>
-                        <li>Pronunciation from day one</li>
-                        <li>Simple sentence patterns</li>
-                        <li>Guided home practice</li>
+                        <li>Pronunciation from lesson one</li>
+                        <li>Clear sentence patterns</li>
+                        <li>Practice between classes</li>
                     </ul>
                 </article>
 
                 <article class="lesson-card">
                     <div class="number">Option 02</div>
                     <h3>Conversation Coaching</h3>
-                    <p>For learners who know some Chinese but need structure, corrections, and more natural speaking habits.</p>
+                    <p>Turn what you know into smoother, more natural speaking with correction and guided practice.</p>
                     <ul>
-                        <li>Topic-based speaking</li>
-                        <li>Role-play for daily life or work</li>
-                        <li>Personal vocab lists after class</li>
+                        <li>Useful speaking topics</li>
+                        <li>Real-life role play</li>
+                        <li>Personal vocabulary notes</li>
                     </ul>
                 </article>
 
                 <article class="lesson-card">
                     <div class="number">Option 03</div>
                     <h3>Goal-Focused Chinese</h3>
-                    <p>For students with specific goals, including HSK, AP Chinese, business Chinese, travel, family, or heritage learning.</p>
+                    <p>Prepare for HSK, AP Chinese, business, travel, family, or heritage learning with a focused plan.</p>
                     <ul>
-                        <li>Goal-based syllabus</li>
-                        <li>Exam and culture support</li>
-                        <li>Progress check-ins</li>
+                        <li>Custom study plan</li>
+                        <li>Exam or life-use support</li>
+                        <li>Regular progress checks</li>
                     </ul>
                 </article>
             </div>
@@ -1238,17 +1327,16 @@
         <section class="section" id="results">
             <div class="section-heading">
                 <p class="section-label">Student feedback</p>
-                <h2>Students describe Mia's lessons as clear, prepared, and easy to stick with.</h2>
+                <h2>Learners stay because lessons are clear, prepared, and easy to follow.</h2>
                 <p class="section-intro">
-                    Across public student reviews, learners highlight Mia's patience, structured preparation, pronunciation help,
-                    engaging class activities, and organized notes after class.
+                    Students often mention Mia's patience, structure, pronunciation support, and organized notes after class.
                 </p>
             </div>
 
             <div class="proof-grid">
                 <article class="proof-card">
                     <strong class="rating-number">5.0</strong>
-                    <p>Public student feedback shows 22 reviews and more than 1,100 online lessons taught at the time this page was refreshed.</p>
+                    <p>22 public reviews and 1,100+ online lessons taught when this page was refreshed.</p>
                 </article>
 
                 <div class="review-grid">
@@ -1271,30 +1359,29 @@
         <section class="band" id="approach">
             <div class="section">
                 <div class="section-heading">
-                    <p class="section-label">Teaching approach</p>
-                    <h2>Warm, practical, and precise.</h2>
+                    <p class="section-label">How lessons work</p>
+                    <h2>Clear structure. Real conversation. Better pronunciation.</h2>
                     <p class="section-intro">
-                        Mandarin gets easier when every lesson has a clear job. Mia's classes combine patient explanation
-                        with active practice so you leave knowing what improved and what to review next.
+                        Each lesson has one job: understand the point, practice it out loud, and know what to review next.
                     </p>
                 </div>
 
                 <div class="method-grid">
                     <article class="method-card">
                         <strong>Pronunciation first</strong>
-                        <p>Tones, rhythm, and pinyin are trained early so your Chinese has a stable sound foundation.</p>
+                        <p>Train tones, rhythm, and pinyin early so your Chinese sounds stable.</p>
                     </article>
                     <article class="method-card">
                         <strong>Real conversation</strong>
-                        <p>Practice useful language for introductions, opinions, plans, daily routines, and personal stories.</p>
+                        <p>Practice introductions, opinions, plans, routines, and stories you actually need.</p>
                     </article>
                     <article class="method-card">
                         <strong>Simple grammar</strong>
-                        <p>Grammar is explained through patterns you can immediately use instead of long rule lists.</p>
+                        <p>Learn patterns you can use immediately, without long rule lists.</p>
                     </article>
                     <article class="method-card">
                         <strong>After-class support</strong>
-                        <p>Review notes and tools help you remember what you learned and keep practicing between lessons.</p>
+                        <p>Get notes and review tools so practice continues after class.</p>
                     </article>
                 </div>
             </div>
@@ -1303,52 +1390,44 @@
         <section class="section" id="book">
             <div class="booking-grid">
                 <div class="booking-copy section-heading">
-                    <p class="section-label">Start here</p>
-                    <h2>Book a trial, then build your Mandarin plan.</h2>
+                    <p class="section-label">Book</p>
+                    <h2>Start with the right lesson.</h2>
                     <p class="section-intro">
-                        This area is ready for a future Cal.com booking flow and Stripe checkout. For now, students can contact Mia directly
-                        and request available trial lesson times.
+                        New students usually begin with a trial. Returning students can book a full private lesson directly.
                     </p>
-                </div>
 
-                <div class="booking-panel">
-                    <h3>Trial lesson request</h3>
-                    <p>Send a short note with your level, your timezone, and what you want Mandarin to help you do.</p>
-                    <ul class="booking-list">
-                        <li>Good for new students who want to meet Mia before choosing a lesson package.</li>
-                        <li>Online lessons are flexible and can be shaped around speaking, pronunciation, grammar, or review.</li>
-                        <li>Booking and payment embeds can be added here later without redesigning the page.</li>
-                    </ul>
-                    <a href="mailto:mia.learnmandarin@gmail.com?subject=Trial%20Mandarin%20Lesson%20Request" class="button button-primary">Email Mia to book</a>
+                    <div class="booking-paths">
+                        <article class="booking-path-card featured">
+                            <span class="booking-path-label">New students</span>
+                            <h3>Book a trial lesson</h3>
+                            <p>Choose a time, share your goals, and get a simple plan for your next steps.</p>
+                            <a href="#trial-calendar" class="button button-primary trial-calendar-link">Book a trial lesson</a>
+                        </article>
 
-                    <div class="social-row" aria-label="Social media links">
-                        <a href="https://www.youtube.com/@mia.mandarin/shorts" class="social-link" target="_blank" rel="noopener">YouTube</a>
-                        <a href="https://www.instagram.com/mia.learnmandarin" class="social-link" target="_blank" rel="noopener">Instagram</a>
-                        <a href="https://www.tiktok.com/@mia.learnmandarin" class="social-link" target="_blank" rel="noopener">TikTok</a>
+                        <article class="booking-path-card">
+                            <span class="booking-path-label">Returning students</span>
+                            <h3>Book a 50-minute private lesson</h3>
+                            <p>For current or returning students ready for a regular one-on-one lesson.</p>
+                            <button
+                                type="button"
+                                class="button button-secondary private-lesson-button"
+                                data-cal-link="mia-zhao/mandarin-50"
+                                data-cal-namespace="mandarin-50"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                                Book a private lesson
+                            </button>
+                        </article>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="section tools-section" id="tools">
-            <div class="section-heading">
-                <p class="section-label">Free study tools</p>
-                <h2>Helpful resources are still here.</h2>
-                <p class="section-intro">
-                    The tools are no longer the main focus of the site, but students can still use them for reading, pinyin,
-                    worksheet practice, and review.
-                </p>
-            </div>
+                <div class="booking-panel" id="trial-calendar">
+                    <h3>Book your trial lesson</h3>
+                    <p>Choose a time below, then answer a few quick questions to confirm.</p>
 
-            <div class="tool-grid">
-                <a href="/pinyin/" class="tool-card">
-                    <strong>Pinyin Toolbox</strong>
-                    <span>Annotate Chinese text with pinyin, definitions, and stroke order support.</span>
-                </a>
-                <a href="/homework/" class="tool-card">
-                    <strong>Homework Helper</strong>
-                    <span>Create worksheets and practice materials for structured review.</span>
-                </a>
+                    <div class="cal-inline-shell">
+                        <div id="my-cal-inline-trial"></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -1356,11 +1435,72 @@
     <footer>
         <div class="footer-inner">
             <p>&copy; 2026 Mia Zhao. Independent online Mandarin lessons.</p>
-            <p>Business inquiries: <a href="mailto:mia.learnmandarin@gmail.com">mia.learnmandarin@gmail.com</a></p>
+            <p>Contact: <a href="mailto:mia.learnmandarin@gmail.com">mia.learnmandarin@gmail.com</a></p>
         </div>
-    </footer>
+</footer>
 </div>
 
+<script type="text/javascript">
+    document.querySelectorAll(".trial-calendar-link").forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            var calendarPanel = document.querySelector("#trial-calendar");
+            if (!calendarPanel) {
+                return;
+            }
+
+            event.preventDefault();
+            calendarPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+            window.history.replaceState(null, "", "#trial-calendar");
+
+            calendarPanel.classList.remove("is-highlighted");
+            void calendarPanel.offsetWidth;
+            calendarPanel.classList.add("is-highlighted");
+        });
+    });
+
+    (function (C, A, L) {
+        let p = function (a, ar) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+                cal.ns = {};
+                cal.q = cal.q || [];
+                d.head.appendChild(d.createElement("script")).src = A;
+                cal.loaded = true;
+            }
+            if (ar[0] === L) {
+                const api = function () { p(api, arguments); };
+                const namespace = ar[1];
+                api.q = api.q || [];
+                if (typeof namespace === "string") {
+                    cal.ns[namespace] = cal.ns[namespace] || api;
+                    p(cal.ns[namespace], ar);
+                    p(cal, ["initNamespace", namespace]);
+                } else {
+                    p(cal, ar);
+                }
+                return;
+            }
+            p(cal, ar);
+        };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", "trial", { origin: "https://app.cal.com" });
+    Cal("init", "mandarin-50", { origin: "https://app.cal.com" });
+    Cal.config = Cal.config || {};
+    Cal.config.forwardQueryParams = true;
+
+    Cal.ns.trial("inline", {
+        elementOrSelector: "#my-cal-inline-trial",
+        config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
+        calLink: "mia-zhao/trial",
+    });
+
+    Cal.ns.trial("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    Cal.ns["mandarin-50"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+</script>
 <script data-goatcounter="https://mia-mandarin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
     </div>
