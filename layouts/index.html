@@ -670,7 +670,17 @@
         font-size: 0.98rem;
     }
 
-    .review-highlight {
+    .review-quote {
+        color: var(--ink);
+        line-height: 1.62;
+        font-size: 0.98rem;
+    }
+
+    .review-quote p {
+        margin: 0;
+    }
+
+    .review-quote strong {
         color: var(--sage-dark);
         font-weight: 900;
         background: linear-gradient(180deg, transparent 58%, rgba(183, 124, 43, 0.24) 0);
@@ -1220,172 +1230,35 @@
                 </div>
             </div>
 
-            <div class="all-reviews" aria-label="All Preply reviews">
+            {{ $reviews := where site.RegularPages "Section" "reviews" }}
+            <div class="all-reviews" aria-label="All reviews">
                 <div class="all-reviews-header">
-                    <h3>All Preply reviews</h3>
-                    <span>22 reviews</span>
+                    <h3>All reviews</h3>
+                    <span>{{ len $reviews }} reviews</span>
                 </div>
 
                 <div class="review-rail" tabindex="0" aria-label="Scrollable list of student reviews">
+                    {{ range $reviews.ByDate.Reverse }}
+                    {{ $reviewer := .Params.reviewer | default .Title }}
+                    {{ $displayReviewer := $reviewer }}
+                    {{ if ne (lower $reviewer) "anonymous" }}
+                        {{ $displayReviewer = printf "%s****" (upper (printf "%.1s" $reviewer)) }}
+                    {{ end }}
                     <article class="full-review-card">
                         <div class="review-meta">
-                            <div><strong>Daria</strong><span>June 25, 2026</span></div>
-                            <span class="review-stars">5.0</span>
+                            <div>
+                                <strong>{{ $displayReviewer }}</strong>
+                                <span>{{ .Date.Format "January 2, 2006" }}</span>
+                            </div>
+                            <span class="review-stars">{{ .Params.rating | default "5.0" }}</span>
                         </div>
-                        <blockquote>Absolutely amazing tutor! Thought me so much from an academic language to everyday life, makes the classes <strong class="review-highlight">engaging and interesting</strong>. <strong class="review-highlight">Always on time and prepared</strong> with interesting content.</blockquote>
+                        <div class="review-quote">{{ .Content }}</div>
                     </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Erica</strong><span>June 12, 2026</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Mingxia is exactly what I was looking for. She prepares <strong class="review-highlight">real life scenarios</strong>, lets me try to speak, then arms me with new vocabulary and helps me practice in a <strong class="review-highlight">pressure free fun way</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>David</strong><span>March 10, 2026</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>She is great because she is <strong class="review-highlight">patient, fun, knowledgeable</strong>, resourceful and kind.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Kevin</strong><span>December 11, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>I've been taking lessons with Mingxia for almost three months now and I couldn't be happier. Her lessons are <strong class="review-highlight">fun, engaging</strong>, and something I <strong class="review-highlight">look forward to every week</strong>!</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Aileen</strong><span>November 27, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Mingxia helped me reach <strong class="review-highlight">HSK 2 in just a few months</strong>. She is super kind, very patient, and explains everything in a way that is <strong class="review-highlight">easy to understand</strong>. 谢谢老师! :)</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Abbey</strong><span>October 28, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>She is extremely good and <strong class="review-highlight">supports me really kindly</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Andrew</strong><span>October 16, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Mingxia is a wonderful teacher who always makes lessons <strong class="review-highlight">engaging and clear</strong>. Her <strong class="review-highlight">detailed vocabulary lists after class</strong> help me review and remember what I learned.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Ettienne</strong><span>October 14, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Mingxia is a fantastic teacher! She brings a lot of energy to class, her <strong class="review-highlight">explanations are very clear</strong>, and she is <strong class="review-highlight">always willing to answer my questions</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Anonymous</strong><span>September 26, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote><strong class="review-highlight">Very patient and encouraging</strong>. Very nice even when I struggle.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Vinod</strong><span>September 24, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>After taking several classes with Mingxia, I <strong class="review-highlight">learned more about tones</strong> than in three years of self-learning. I only wish I had started with her guidance.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>jeremiah</strong><span>September 12, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Great tutor, persistent and firm, always stays <strong class="review-highlight">determined on proficiency</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Sophia</strong><span>July 1, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Very <strong class="review-highlight">kind, patient, and knowledgable</strong>! A good teacher with <strong class="review-highlight">good lesson structures</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Pornpunsa</strong><span>June 27, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Oscar really enjoys his lessons and is <strong class="review-highlight">making good progress</strong> thanks to Mingxia. <strong class="review-highlight">Brilliant</strong>, get her as your tutor. It's amazing quality.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Amy</strong><span>June 9, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Mingxia is very encouraging and makes the lessons <strong class="review-highlight">fun and engaging</strong>. I feel like she is helping me <strong class="review-highlight">progress quickly</strong> with my Chinese lessons.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Hannah</strong><span>May 22, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>She <strong class="review-highlight">tailors the classes</strong> to what I need. She is <strong class="review-highlight">super patient</strong> and takes time to review, which is helpful if I did not get time during the week.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Cindy</strong><span>May 19, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Mingxia is super nice and patient. Her lessons are <strong class="review-highlight">organized and tailored to your goals</strong>, and her <strong class="review-highlight">clear explanations</strong> make Chinese sentences easier to understand.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>izaak</strong><span>May 13, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Mingxia is <strong class="review-highlight">engaging, professional, friendly, patient</strong>, and very flexible. She introduces words and related phrases that help build <strong class="review-highlight">practical language skills</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Helin</strong><span>May 12, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Soooo cuteeee and <strong class="review-highlight">nice and patient</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Ethan</strong><span>February 26, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>She is an excellent person to start learning Chinese with. She focuses on conversation, so I am learning how to have <strong class="review-highlight">actual conversations</strong>, not just repeat course material.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Lizzy</strong><span>February 12, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>I've had a fantastic experience learning Chinese with Mia. She is <strong class="review-highlight">incredibly helpful and enthusiastic</strong>, making each lesson both <strong class="review-highlight">engaging and effective</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Anonymous</strong><span>January 9, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote>Mingxia lao shi is probably one of the most <strong class="review-highlight">organized and best prepared</strong> teachers on Preply. She is thoughtful, dynamic, and puts <strong class="review-highlight">a lot of effort into each lesson</strong>.</blockquote>
-                    </article>
-                    <article class="full-review-card">
-                        <div class="review-meta">
-                            <div><strong>Marie</strong><span>January 6, 2025</span></div>
-                            <span class="review-stars">5.0</span>
-                        </div>
-                        <blockquote><strong class="review-highlight">Outstanding tutor</strong> who exceeded all my expectations. Her teaching methods blend <strong class="review-highlight">clear explanations, practical exercises, and cultural insights</strong> in a supportive environment.</blockquote>
-                    </article>
+                    {{ end }}
                 </div>
                 <div class="review-progress" aria-hidden="true">
                     <div class="review-progress-bar"></div>
                 </div>
-                <p class="review-source-note">Student comments adapted from public Preply reviews.</p>
             </div>
         </section>
 
