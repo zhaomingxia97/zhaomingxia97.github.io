@@ -1,22 +1,28 @@
 {{ define "styles" }}
 <style>
     :root {
-        --ink: #17201a;
-        --soft-ink: #425046;
-        --line: #dfe8df;
-        --cream: #fffaf1;
-        --paper: #ffffff;
-        --sage: #326343;
-        --sage-dark: #1f3d2b;
-        --sage-soft: #edf6ee;
-        --gold: #d6932f;
-        --gold-soft: #fff2d8;
+        --ink: #111713;
+        --soft-ink: #526056;
+        --line: #d7ded5;
+        --cream: #fbf7ee;
+        --paper: #fffdfa;
+        --sage: #2f6144;
+        --sage-dark: #183725;
+        --sage-soft: #eaf2e9;
+        --gold: #b77c2b;
+        --gold-soft: #fff0d2;
+        --red: #b24a3a;
+        --shadow: 0 24px 60px rgba(24, 55, 37, 0.12);
     }
 
     body {
         background: var(--cream);
         padding: 0;
         color: var(--ink);
+    }
+
+    html {
+        scroll-behavior: smooth;
     }
 
     body::before {
@@ -31,25 +37,26 @@
     .site-shell {
         min-height: 100vh;
         background:
-            linear-gradient(180deg, rgba(255, 250, 241, 0.96), rgba(255, 255, 255, 0.98) 42%, #f7fbf6),
-            radial-gradient(circle at 88% 5%, rgba(214, 147, 47, 0.16), transparent 30%),
-            radial-gradient(circle at 8% 10%, rgba(50, 99, 67, 0.12), transparent 26%);
+            linear-gradient(90deg, rgba(24, 55, 37, 0.04) 1px, transparent 1px),
+            linear-gradient(180deg, rgba(24, 55, 37, 0.04) 1px, transparent 1px),
+            linear-gradient(180deg, var(--cream) 0%, #ffffff 44%, #f6faf5 100%);
+        background-size: 72px 72px, 72px 72px, auto;
     }
 
     .topbar {
         position: sticky;
         top: 0;
         z-index: 20;
-        border-bottom: 1px solid rgba(31, 61, 43, 0.1);
-        background: rgba(255, 250, 241, 0.88);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(24, 55, 37, 0.14);
+        background: rgba(251, 247, 238, 0.92);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
     }
 
     .topbar-inner {
-        max-width: 1120px;
+        max-width: 1180px;
         margin: 0 auto;
-        padding: 1rem 1.25rem;
+        padding: 0.95rem 1.25rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -59,20 +66,20 @@
     .brand {
         display: inline-flex;
         align-items: center;
-        gap: 0.75rem;
+        gap: 0.85rem;
         color: var(--sage-dark);
         text-decoration: none;
     }
 
     .brand-mark {
-        width: 42px;
-        height: 42px;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
         display: block;
         object-fit: cover;
-        border: 2px solid rgba(31, 61, 43, 0.16);
+        border: 2px solid rgba(24, 55, 37, 0.16);
         background: #fffaf1;
-        box-shadow: 0 10px 24px rgba(31, 61, 43, 0.16);
+        box-shadow: 0 12px 26px rgba(24, 55, 37, 0.18);
     }
 
     .brand-text {
@@ -84,31 +91,35 @@
 
     .brand-name {
         color: var(--sage-dark);
-        font-size: 1.08rem;
+        font-size: 1.12rem;
         font-weight: 850;
-        letter-spacing: 0.01em;
+        letter-spacing: 0;
     }
 
     .brand-role {
-        color: rgba(31, 61, 43, 0.68);
+        color: rgba(24, 55, 37, 0.68);
         font-size: 0.72rem;
         font-weight: 800;
-        letter-spacing: 0.03em;
+        letter-spacing: 0;
     }
 
     .nav-links {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 0.35rem;
+        gap: 0.2rem;
         margin: 0;
         flex-wrap: wrap;
+        padding: 0.25rem;
+        border: 1px solid rgba(24, 55, 37, 0.12);
+        border-radius: 999px;
+        background: rgba(255, 253, 250, 0.72);
     }
 
     .nav-link {
         display: inline-flex;
         align-items: center;
-        padding: 0.55rem 0.8rem;
+        padding: 0.55rem 0.82rem;
         border-radius: 999px;
         text-decoration: none;
         color: var(--soft-ink);
@@ -128,7 +139,7 @@
         background: var(--sage-dark);
         color: white;
         border-color: var(--sage-dark);
-        box-shadow: 0 10px 24px rgba(31, 61, 43, 0.18);
+        box-shadow: 0 10px 24px rgba(24, 55, 37, 0.18);
     }
 
     .nav-cta:hover {
@@ -141,35 +152,35 @@
     }
 
     .section {
-        max-width: 1120px;
+        max-width: 1180px;
         margin: 0 auto;
-        padding: 5rem 1.25rem;
+        padding: 5.5rem 1.25rem;
     }
 
     .hero {
         display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+        grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
         align-items: center;
-        gap: 4rem;
+        gap: 4.5rem;
         min-height: calc(100vh - 72px);
-        padding-top: 4rem;
-        padding-bottom: 5rem;
+        padding-top: 4.5rem;
+        padding-bottom: 5.75rem;
     }
 
     .eyebrow {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
         width: fit-content;
-        padding: 0.45rem 0.75rem;
-        border-radius: 999px;
-        background: var(--sage-soft);
+        padding: 0.45rem 0.7rem;
+        border-radius: 8px;
+        border-left: 4px solid var(--red);
+        background: rgba(255, 253, 250, 0.76);
         color: var(--sage-dark);
         font-size: 0.78rem;
         font-weight: 800;
-        letter-spacing: 0.08em;
+        letter-spacing: 0;
         text-transform: uppercase;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.35rem;
     }
 
     h1,
@@ -182,18 +193,20 @@
     h1 {
         max-width: 680px;
         color: var(--ink);
-        font-size: clamp(2.75rem, 5vw, 4.8rem);
-        line-height: 0.98;
-        letter-spacing: -0.05em;
+        font-size: 4.8rem;
+        line-height: 0.96;
+        letter-spacing: 0;
         font-weight: 850;
     }
 
     .hero-copy {
-        max-width: 650px;
-        margin-top: 1.35rem;
+        max-width: 600px;
+        margin-top: 1.5rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--gold);
         color: var(--soft-ink);
-        font-size: 1.18rem;
-        line-height: 1.75;
+        font-size: 1.12rem;
+        line-height: 1.7;
     }
 
     .hero-actions {
@@ -210,17 +223,17 @@
         justify-content: center;
         min-height: 48px;
         padding: 0.9rem 1.2rem;
-        border-radius: 999px;
+        border-radius: 8px;
         text-decoration: none;
         font-weight: 800;
         border: 1px solid var(--sage-dark);
-        transition: all 0.2s ease;
+        transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     }
 
     .button-primary {
         background: var(--sage-dark);
         color: white;
-        box-shadow: 0 16px 34px rgba(31, 61, 43, 0.22);
+        box-shadow: 0 18px 34px rgba(24, 55, 37, 0.22);
         min-height: 56px;
         padding: 1rem 1.45rem;
         font-size: 1.02rem;
@@ -232,7 +245,7 @@
     }
 
     .button-secondary {
-        background: rgba(255, 255, 255, 0.65);
+        background: rgba(255, 253, 250, 0.72);
         color: var(--sage-dark);
     }
 
@@ -243,29 +256,22 @@
 
     .profile-card {
         position: relative;
-        border: 1px solid rgba(31, 61, 43, 0.13);
-        border-radius: 28px;
-        background: rgba(255, 255, 255, 0.78);
-        box-shadow: 0 28px 70px rgba(31, 61, 43, 0.16);
-        padding: 1.25rem;
+        border: 1px solid rgba(24, 55, 37, 0.16);
+        border-radius: 8px;
+        background: rgba(255, 253, 250, 0.86);
+        box-shadow: var(--shadow);
+        padding: 0.9rem;
     }
 
     .profile-card::before {
-        content: "";
-        position: absolute;
-        inset: 1rem;
-        border-radius: 22px;
-        border: 1px dashed rgba(50, 99, 67, 0.22);
-        pointer-events: none;
+        display: none;
     }
 
     .profile-video {
         position: relative;
         aspect-ratio: 16 / 9;
-        border-radius: 22px;
-        background:
-            linear-gradient(145deg, rgba(50, 99, 67, 0.95), rgba(31, 61, 43, 0.96)),
-            radial-gradient(circle at 70% 22%, rgba(214, 147, 47, 0.42), transparent 24%);
+        border-radius: 6px;
+        background: linear-gradient(145deg, rgba(47, 97, 68, 0.95), rgba(24, 55, 37, 0.96));
         overflow: hidden;
         color: white;
     }
@@ -284,28 +290,28 @@
 
     .profile-socials {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 0.75rem;
         margin-top: 1rem;
     }
 
     .profile-social-link {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
-        border: 1px solid rgba(31, 61, 43, 0.1);
+        border-radius: 8px;
+        border: 1px solid rgba(24, 55, 37, 0.1);
         background: white;
         color: var(--sage-dark);
-        box-shadow: 0 10px 24px rgba(31, 61, 43, 0.1);
+        box-shadow: 0 10px 22px rgba(24, 55, 37, 0.09);
         transition: all 0.2s ease;
     }
 
     .profile-social-link:hover {
         transform: translateY(-2px);
-        box-shadow: 0 16px 30px rgba(31, 61, 43, 0.16);
+        box-shadow: 0 16px 30px rgba(24, 55, 37, 0.14);
     }
 
     .profile-social-link svg {
@@ -330,16 +336,21 @@
         position: relative;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.75rem;
+        gap: 0;
         margin-top: 1rem;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
         z-index: 1;
     }
 
     .mini-stat {
-        border-radius: 16px;
-        background: #fffaf1;
-        padding: 1rem;
-        border: 1px solid rgba(31, 61, 43, 0.1);
+        padding: 1rem 0.85rem;
+        border-right: 1px solid var(--line);
+        background: transparent;
+    }
+
+    .mini-stat:last-child {
+        border-right: 0;
     }
 
     .mini-stat strong {
@@ -367,18 +378,22 @@
     }
 
     .credential-list li {
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.78);
-        border: 1px solid rgba(31, 61, 43, 0.1);
-        padding: 0.75rem 0.9rem;
+        border-bottom: 1px solid rgba(24, 55, 37, 0.1);
+        padding: 0 0 0.65rem;
         color: var(--soft-ink);
         font-size: 0.9rem;
         line-height: 1.45;
     }
 
     .section-heading {
-        max-width: 740px;
+        max-width: none;
         margin-bottom: 2rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(24, 55, 37, 0.18);
+        display: grid;
+        grid-template-columns: 170px minmax(0, 1fr);
+        column-gap: 2rem;
+        align-items: start;
     }
 
     .section-label {
@@ -386,23 +401,25 @@
         font-size: 0.78rem;
         font-weight: 850;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        letter-spacing: 0;
         margin-bottom: 0.65rem;
     }
 
     h2 {
         color: var(--ink);
-        font-size: clamp(2rem, 4vw, 3.25rem);
+        font-size: 3.05rem;
         line-height: 1.05;
-        letter-spacing: -0.04em;
+        letter-spacing: 0;
         font-weight: 850;
     }
 
     .section-intro {
+        grid-column: 2;
+        max-width: 690px;
         margin-top: 0.9rem;
         color: var(--soft-ink);
-        font-size: 1.05rem;
-        line-height: 1.75;
+        font-size: 1.02rem;
+        line-height: 1.7;
     }
 
     .lesson-grid {
@@ -418,21 +435,26 @@
         background: var(--paper);
         border: 1px solid var(--line);
         border-radius: 8px;
-        box-shadow: 0 16px 40px rgba(31, 61, 43, 0.07);
+        box-shadow: 0 18px 44px rgba(24, 55, 37, 0.07);
     }
 
     .lesson-card {
-        padding: 1.5rem;
+        padding: 1.35rem;
         display: flex;
         flex-direction: column;
         min-height: 260px;
+        border-top: 4px solid var(--sage-dark);
     }
 
     .lesson-card .number {
+        width: fit-content;
+        padding: 0.32rem 0.5rem;
+        border-radius: 6px;
+        background: var(--gold-soft);
         color: var(--gold);
         font-weight: 850;
         font-size: 0.78rem;
-        letter-spacing: 0.1em;
+        letter-spacing: 0;
         text-transform: uppercase;
         margin-bottom: 1.25rem;
     }
@@ -469,23 +491,25 @@
     .proof-card {
         border-radius: 8px;
         border: 1px solid var(--line);
-        background: white;
-        box-shadow: 0 16px 40px rgba(31, 61, 43, 0.07);
+        background:
+            linear-gradient(135deg, rgba(24, 55, 37, 0.94), rgba(47, 97, 68, 0.92)),
+            var(--sage-dark);
+        box-shadow: var(--shadow);
         padding: 1.5rem;
     }
 
     .rating-number {
         display: block;
-        color: var(--sage-dark);
+        color: white;
         font-size: 4rem;
         line-height: 0.95;
-        letter-spacing: -0.05em;
+        letter-spacing: 0;
         font-weight: 900;
         margin-bottom: 0.75rem;
     }
 
     .proof-card p {
-        color: var(--soft-ink);
+        color: rgba(255, 255, 255, 0.78);
         line-height: 1.7;
     }
 
@@ -497,9 +521,10 @@
 
     .review-card {
         border-radius: 8px;
-        background: var(--gold-soft);
-        border: 1px solid rgba(214, 147, 47, 0.22);
+        background: var(--paper);
+        border: 1px solid rgba(183, 124, 43, 0.25);
         padding: 1.2rem;
+        border-top: 4px solid var(--gold);
     }
 
     .review-card blockquote {
@@ -516,8 +541,154 @@
         font-weight: 700;
     }
 
+    .all-reviews {
+        margin-top: 1.25rem;
+        border-top: 1px solid rgba(24, 55, 37, 0.16);
+        padding-top: 1.25rem;
+    }
+
+    .all-reviews-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .all-reviews-header h3 {
+        color: var(--sage-dark);
+        font-size: 1.35rem;
+        line-height: 1.15;
+    }
+
+    .all-reviews-header span {
+        color: var(--gold);
+        font-size: 0.78rem;
+        font-weight: 850;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .review-progress {
+        height: 3px;
+        border-radius: 999px;
+        background: rgba(24, 55, 37, 0.05);
+        overflow: hidden;
+        margin-top: 0.25rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .review-progress-bar {
+        width: 0;
+        height: 100%;
+        border-radius: inherit;
+        background: rgba(24, 55, 37, 0.22);
+        transform-origin: left center;
+    }
+
+    .review-progress-bar.is-running {
+        animation: review-progress 6s linear forwards;
+    }
+
+    .review-progress-bar.is-paused {
+        animation-play-state: paused;
+    }
+
+    @keyframes review-progress {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    .review-rail {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(320px, 410px);
+        gap: 1rem;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline mandatory;
+        padding: 0.15rem 0 1rem;
+    }
+
+    .review-rail::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .review-rail::-webkit-scrollbar-track {
+        background: rgba(24, 55, 37, 0.08);
+        border-radius: 999px;
+    }
+
+    .review-rail::-webkit-scrollbar-thumb {
+        background: var(--sage);
+        border-radius: 999px;
+    }
+
+    .full-review-card {
+        scroll-snap-align: start;
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-top: 4px solid var(--sage-dark);
+        border-radius: 8px;
+        background: rgba(255, 253, 250, 0.94);
+        box-shadow: 0 18px 44px rgba(24, 55, 37, 0.07);
+        padding: 1.2rem;
+    }
+
+    .review-meta {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        color: var(--soft-ink);
+        font-size: 0.82rem;
+        margin-bottom: 1rem;
+    }
+
+    .review-meta strong {
+        display: block;
+        color: var(--sage-dark);
+        font-size: 1rem;
+    }
+
+    .review-stars {
+        color: var(--gold);
+        font-weight: 900;
+        white-space: nowrap;
+    }
+
+    .full-review-card blockquote {
+        margin: 0;
+        color: var(--ink);
+        line-height: 1.62;
+        font-size: 0.98rem;
+    }
+
+    .review-highlight {
+        color: var(--sage-dark);
+        font-weight: 900;
+        background: linear-gradient(180deg, transparent 58%, rgba(183, 124, 43, 0.24) 0);
+        padding: 0 0.04em;
+    }
+
+    .review-source-note {
+        margin-top: 0.75rem;
+        color: var(--soft-ink);
+        font-size: 0.88rem;
+    }
+
     .band {
-        background: var(--sage-dark);
+        background:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            var(--sage-dark);
+        background-size: 72px 72px, 72px 72px, auto;
         color: white;
     }
 
@@ -538,7 +709,7 @@
 
     .method-card {
         padding: 1.4rem;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 253, 250, 0.08);
         border-color: rgba(255, 255, 255, 0.16);
         box-shadow: none;
     }
@@ -572,22 +743,25 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
         margin-top: 1.75rem;
+        grid-column: 1 / -1;
     }
 
     .booking-path-card {
         background: var(--paper);
         border: 1px solid var(--line);
         border-radius: 8px;
-        padding: 1.25rem;
-        box-shadow: 0 16px 40px rgba(31, 61, 43, 0.07);
+        padding: 1.35rem;
+        box-shadow: 0 18px 44px rgba(24, 55, 37, 0.07);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        border-top: 4px solid var(--line);
     }
 
     .booking-path-card.featured {
-        background: var(--sage-soft);
+        background: linear-gradient(180deg, #f4faf3, var(--paper));
         border-color: rgba(50, 99, 67, 0.2);
+        border-top-color: var(--sage);
     }
 
     .booking-path-label {
@@ -595,7 +769,7 @@
         color: var(--gold);
         font-size: 0.74rem;
         font-weight: 850;
-        letter-spacing: 0.08em;
+        letter-spacing: 0;
         text-transform: uppercase;
         margin-bottom: 0.65rem;
     }
@@ -618,8 +792,9 @@
     }
 
     .booking-panel {
-        padding: 1.5rem;
+        padding: 1.35rem;
         scroll-margin-top: 6rem;
+        border-top: 4px solid var(--sage-dark);
     }
 
     .booking-panel.is-highlighted {
@@ -628,20 +803,20 @@
 
     @keyframes booking-panel-pulse {
         0% {
-            border-color: rgba(214, 147, 47, 0.9);
-            box-shadow: 0 0 0 0 rgba(214, 147, 47, 0.38), 0 16px 40px rgba(31, 61, 43, 0.07);
-            background: #fffaf1;
+            border-color: rgba(183, 124, 43, 0.9);
+            box-shadow: 0 0 0 0 rgba(183, 124, 43, 0.38), 0 18px 44px rgba(24, 55, 37, 0.07);
+            background: var(--cream);
         }
 
         45% {
-            border-color: rgba(214, 147, 47, 0.9);
-            box-shadow: 0 0 0 12px rgba(214, 147, 47, 0), 0 20px 48px rgba(31, 61, 43, 0.12);
+            border-color: rgba(183, 124, 43, 0.9);
+            box-shadow: 0 0 0 12px rgba(183, 124, 43, 0), 0 20px 48px rgba(24, 55, 37, 0.12);
             background: var(--gold-soft);
         }
 
         100% {
             border-color: var(--line);
-            box-shadow: 0 16px 40px rgba(31, 61, 43, 0.07);
+            box-shadow: 0 18px 44px rgba(24, 55, 37, 0.07);
             background: var(--paper);
         }
     }
@@ -665,10 +840,7 @@
 
     .cal-inline-shell {
         width: 100%;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: white;
-        box-shadow: 0 16px 40px rgba(31, 61, 43, 0.07);
+        background: transparent;
     }
 
     #my-cal-inline-trial {
@@ -717,7 +889,7 @@
     }
 
     .footer-inner {
-        max-width: 1120px;
+        max-width: 1180px;
         margin: 0 auto;
         padding: 2rem 1.25rem;
         display: flex;
@@ -732,6 +904,40 @@
         color: var(--sage-dark);
         font-weight: 800;
         text-decoration: none;
+    }
+
+    .back-to-top {
+        position: fixed;
+        right: 1.25rem;
+        bottom: 1.25rem;
+        z-index: 30;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.75rem 0.95rem;
+        border-radius: 8px;
+        border: 1px solid rgba(24, 55, 37, 0.18);
+        background: var(--sage-dark);
+        color: white;
+        font-weight: 850;
+        text-decoration: none;
+        box-shadow: 0 16px 34px rgba(24, 55, 37, 0.24);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(8px);
+        transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    }
+
+    .back-to-top.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+        background: var(--sage);
+        transform: translateY(-2px);
     }
 
     @media (max-width: 920px) {
@@ -752,6 +958,23 @@
         .hero {
             min-height: 0;
             padding-top: 3.5rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2.55rem;
+        }
+
+        .section-heading {
+            grid-template-columns: 1fr;
+            row-gap: 0.4rem;
+        }
+
+        .section-intro {
+            grid-column: auto;
         }
 
         .lesson-grid,
@@ -778,17 +1001,44 @@
             padding: 0.9rem 1rem;
         }
 
+        .nav-links {
+            border-radius: 8px;
+            width: 100%;
+        }
+
         .nav-link {
             padding: 0.5rem 0.7rem;
             font-size: 0.82rem;
         }
 
         h1 {
-            font-size: 2.75rem;
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 2.1rem;
         }
 
         .hero-copy {
             font-size: 1.05rem;
+        }
+
+        .all-reviews-header {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .review-rail {
+            grid-auto-columns: minmax(280px, 86vw);
+        }
+
+        .back-to-top {
+            right: 1rem;
+            bottom: 1rem;
+            min-height: 40px;
+            padding: 0.65rem 0.8rem;
+            font-size: 0.9rem;
         }
 
         .profile-details,
@@ -809,10 +1059,10 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="site-shell">
+<div class="site-shell" id="top">
     <header class="topbar">
         <div class="topbar-inner">
-            <a href="{{ "/" | relURL }}" class="brand" aria-label="Mia Zhao Mandarin home">
+            <a href="{{ "/" | relURL }}" class="brand" aria-label="Mia Zhao Mandarin Home">
                 <img src="{{ "/logo.jpg" | relURL }}" alt="Mia Zhao logo" class="brand-mark" onerror="this.onerror=null;this.src='{{ "/static/logo.jpg" | relURL }}';">
                 <span class="brand-text">
                     <span class="brand-name">Mia Zhao</span>
@@ -969,6 +1219,174 @@
                     </article>
                 </div>
             </div>
+
+            <div class="all-reviews" aria-label="All Preply reviews">
+                <div class="all-reviews-header">
+                    <h3>All Preply reviews</h3>
+                    <span>22 reviews</span>
+                </div>
+
+                <div class="review-rail" tabindex="0" aria-label="Scrollable list of student reviews">
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Daria</strong><span>June 25, 2026</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Absolutely amazing tutor! Thought me so much from an academic language to everyday life, makes the classes <strong class="review-highlight">engaging and interesting</strong>. <strong class="review-highlight">Always on time and prepared</strong> with interesting content.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Erica</strong><span>June 12, 2026</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Mingxia is exactly what I was looking for. She prepares <strong class="review-highlight">real life scenarios</strong>, lets me try to speak, then arms me with new vocabulary and helps me practice in a <strong class="review-highlight">pressure free fun way</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>David</strong><span>March 10, 2026</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>She is great because she is <strong class="review-highlight">patient, fun, knowledgeable</strong>, resourceful and kind.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Kevin</strong><span>December 11, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>I've been taking lessons with Mingxia for almost three months now and I couldn't be happier. Her lessons are <strong class="review-highlight">fun, engaging</strong>, and something I <strong class="review-highlight">look forward to every week</strong>!</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Aileen</strong><span>November 27, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Mingxia helped me reach <strong class="review-highlight">HSK 2 in just a few months</strong>. She is super kind, very patient, and explains everything in a way that is <strong class="review-highlight">easy to understand</strong>. 谢谢老师! :)</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Abbey</strong><span>October 28, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>She is extremely good and <strong class="review-highlight">supports me really kindly</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Andrew</strong><span>October 16, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Mingxia is a wonderful teacher who always makes lessons <strong class="review-highlight">engaging and clear</strong>. Her <strong class="review-highlight">detailed vocabulary lists after class</strong> help me review and remember what I learned.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Ettienne</strong><span>October 14, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Mingxia is a fantastic teacher! She brings a lot of energy to class, her <strong class="review-highlight">explanations are very clear</strong>, and she is <strong class="review-highlight">always willing to answer my questions</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Anonymous</strong><span>September 26, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote><strong class="review-highlight">Very patient and encouraging</strong>. Very nice even when I struggle.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Vinod</strong><span>September 24, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>After taking several classes with Mingxia, I <strong class="review-highlight">learned more about tones</strong> than in three years of self-learning. I only wish I had started with her guidance.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>jeremiah</strong><span>September 12, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Great tutor, persistent and firm, always stays <strong class="review-highlight">determined on proficiency</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Sophia</strong><span>July 1, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Very <strong class="review-highlight">kind, patient, and knowledgable</strong>! A good teacher with <strong class="review-highlight">good lesson structures</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Pornpunsa</strong><span>June 27, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Oscar really enjoys his lessons and is <strong class="review-highlight">making good progress</strong> thanks to Mingxia. <strong class="review-highlight">Brilliant</strong>, get her as your tutor. It's amazing quality.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Amy</strong><span>June 9, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Mingxia is very encouraging and makes the lessons <strong class="review-highlight">fun and engaging</strong>. I feel like she is helping me <strong class="review-highlight">progress quickly</strong> with my Chinese lessons.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Hannah</strong><span>May 22, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>She <strong class="review-highlight">tailors the classes</strong> to what I need. She is <strong class="review-highlight">super patient</strong> and takes time to review, which is helpful if I did not get time during the week.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Cindy</strong><span>May 19, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Mingxia is super nice and patient. Her lessons are <strong class="review-highlight">organized and tailored to your goals</strong>, and her <strong class="review-highlight">clear explanations</strong> make Chinese sentences easier to understand.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>izaak</strong><span>May 13, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Mingxia is <strong class="review-highlight">engaging, professional, friendly, patient</strong>, and very flexible. She introduces words and related phrases that help build <strong class="review-highlight">practical language skills</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Helin</strong><span>May 12, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Soooo cuteeee and <strong class="review-highlight">nice and patient</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Ethan</strong><span>February 26, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>She is an excellent person to start learning Chinese with. She focuses on conversation, so I am learning how to have <strong class="review-highlight">actual conversations</strong>, not just repeat course material.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Lizzy</strong><span>February 12, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>I've had a fantastic experience learning Chinese with Mia. She is <strong class="review-highlight">incredibly helpful and enthusiastic</strong>, making each lesson both <strong class="review-highlight">engaging and effective</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Anonymous</strong><span>January 9, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote>Mingxia lao shi is probably one of the most <strong class="review-highlight">organized and best prepared</strong> teachers on Preply. She is thoughtful, dynamic, and puts <strong class="review-highlight">a lot of effort into each lesson</strong>.</blockquote>
+                    </article>
+                    <article class="full-review-card">
+                        <div class="review-meta">
+                            <div><strong>Marie</strong><span>January 6, 2025</span></div>
+                            <span class="review-stars">5.0</span>
+                        </div>
+                        <blockquote><strong class="review-highlight">Outstanding tutor</strong> who exceeded all my expectations. Her teaching methods blend <strong class="review-highlight">clear explanations, practical exercises, and cultural insights</strong> in a supportive environment.</blockquote>
+                    </article>
+                </div>
+                <div class="review-progress" aria-hidden="true">
+                    <div class="review-progress-bar"></div>
+                </div>
+                <p class="review-source-note">Student comments adapted from public Preply reviews.</p>
+            </div>
         </section>
 
         <section class="band" id="approach">
@@ -1053,6 +1471,7 @@
             <p>Contact: <a href="mailto:mia.learnmandarin@gmail.com">mia.learnmandarin@gmail.com</a></p>
         </div>
 </footer>
+<a href="#top" class="back-to-top" aria-label="Back to top">Top</a>
 </div>
 
 <script type="text/javascript">
@@ -1072,6 +1491,98 @@
             calendarPanel.classList.add("is-highlighted");
         });
     });
+
+    document.querySelectorAll(".review-rail").forEach(function (rail) {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            return;
+        }
+
+        var progressBar = rail.parentElement.querySelector(".review-progress-bar");
+        var cards = Array.prototype.slice.call(rail.querySelectorAll(".full-review-card"));
+        var currentIndex = 0;
+        var isPaused = false;
+        var resumeTimer;
+        var autoplayTimer;
+        var autoplayDelay = 6000;
+
+        function restartProgress() {
+            if (!progressBar) {
+                return;
+            }
+
+            progressBar.classList.remove("is-running", "is-paused");
+            void progressBar.offsetWidth;
+            progressBar.classList.add("is-running");
+        }
+
+        function scheduleNext() {
+            window.clearTimeout(autoplayTimer);
+            autoplayTimer = window.setTimeout(function () {
+                if (isPaused || !cards.length || rail.scrollWidth <= rail.clientWidth) {
+                    scheduleNext();
+                    return;
+                }
+
+                currentIndex = (currentIndex + 1) % cards.length;
+                rail.scrollTo({ left: cards[currentIndex].offsetLeft - rail.offsetLeft, behavior: "smooth" });
+                restartProgress();
+                scheduleNext();
+            }, autoplayDelay);
+        }
+
+        function pause() {
+            isPaused = true;
+            window.clearTimeout(resumeTimer);
+            if (progressBar) {
+                progressBar.classList.add("is-paused");
+            }
+        }
+
+        function resumeSoon() {
+            window.clearTimeout(resumeTimer);
+            resumeTimer = window.setTimeout(function () {
+                isPaused = false;
+                if (progressBar) {
+                    progressBar.classList.remove("is-paused");
+                }
+            }, 1200);
+        }
+
+        rail.addEventListener("mouseenter", pause);
+        rail.addEventListener("mouseleave", resumeSoon);
+        rail.addEventListener("focusin", pause);
+        rail.addEventListener("focusout", resumeSoon);
+        rail.addEventListener("touchstart", pause, { passive: true });
+        rail.addEventListener("touchend", resumeSoon, { passive: true });
+        rail.addEventListener("wheel", resumeSoon, { passive: true });
+        rail.addEventListener("scroll", function () {
+            var nearestIndex = 0;
+            var smallestDistance = Infinity;
+
+            cards.forEach(function (card, index) {
+                var distance = Math.abs(card.offsetLeft - rail.offsetLeft - rail.scrollLeft);
+                if (distance < smallestDistance) {
+                    smallestDistance = distance;
+                    nearestIndex = index;
+                }
+            });
+
+            currentIndex = nearestIndex;
+        }, { passive: true });
+
+        restartProgress();
+        scheduleNext();
+    });
+
+    var backToTop = document.querySelector(".back-to-top");
+    if (backToTop) {
+        var updateBackToTop = function () {
+            backToTop.classList.toggle("is-visible", window.scrollY > 420);
+        };
+
+        updateBackToTop();
+        window.addEventListener("scroll", updateBackToTop, { passive: true });
+    }
 
     (function (C, A, L) {
         let p = function (a, ar) { a.q.push(ar); };

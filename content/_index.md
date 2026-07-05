@@ -1,3 +1,3 @@
 ---
-title: "Mia Zhao Mandarin"
+title: "Mia Zhao | Mandarin Teacher"
 ---

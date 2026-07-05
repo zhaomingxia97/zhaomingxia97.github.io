@@ -1,6 +1,6 @@
 baseURL = 'https://mia-mandarin.github.io/'
 languageCode = 'en-us'
-title = 'Mia Zhao Mandarin'
+title = 'Mia Zhao | Mandarin Teacher'
 
 [markup]
   [markup.goldmark]
