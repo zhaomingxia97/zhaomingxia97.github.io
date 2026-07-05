@@ -1105,7 +1105,7 @@
             <aside class="profile-card" aria-label="Mia Zhao teacher profile">
                 <div class="profile-video">
                     <iframe
-                        src="https://www.youtube.com/embed/_5T2m0E74RM?rel=0&controls=1&modestbranding=1&playsinline=1"
+                        src="https://www.youtube.com/embed/q0MTX_50vpY?rel=0&controls=1&modestbranding=1&playsinline=1"
                         title="Mia Zhao introduction video"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
@@ -1241,9 +1241,7 @@
                     {{ range $reviews.ByDate.Reverse }}
                     {{ $reviewer := .Params.reviewer | default .Title }}
                     {{ $displayReviewer := $reviewer }}
-                    {{ if ne (lower $reviewer) "anonymous" }}
-                        {{ $displayReviewer = printf "%s****" (upper (printf "%.1s" $reviewer)) }}
-                    {{ end }}
+                    {{ $displayReviewer = printf "%s****" (upper (printf "%.1s" $reviewer)) }}
                     <article class="full-review-card">
                         <div class="review-meta">
                             <div>
