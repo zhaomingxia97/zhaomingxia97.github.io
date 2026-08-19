@@ -144,6 +144,23 @@
         border-color: rgba(183, 124, 43, 0.28);
     }
 
+    .nav-external {
+        margin-left: 0.2rem;
+        color: #9a641f;
+    }
+
+    .nav-external::after {
+        content: "↗";
+        margin-left: 0.3rem;
+        font-size: 0.82em;
+    }
+
+    .nav-external:hover {
+        color: #7d4d14;
+        background: rgba(183, 124, 43, 0.1);
+        border-color: rgba(183, 124, 43, 0.24);
+    }
+
     .nav-cta {
         background: var(--sage-dark);
         color: white;
@@ -1190,10 +1207,10 @@
             <a href="#book" class="mobile-book-cta">Book a Lesson</a>
             <nav class="nav-links" aria-label="Primary navigation">
                 <a href="#lessons" class="nav-link">Lessons</a>
-                <a href="https://words.miazhao.com/" class="nav-link">Vocabulary</a>
                 <a href="#results" class="nav-link">Reviews</a>
                 <a href="#approach" class="nav-link">Approach</a>
                 <a href="mailto:mia@miazhao.com" class="nav-link nav-email" title="Primary: mia@miazhao.com. Backup: miazhaomandarin@gmail.com">Email</a>
+                <a href="https://words.miazhao.com/" class="nav-link nav-external" target="_blank" rel="noopener" aria-label="Vocabulary practice, opens in a new tab">Vocabulary</a>
                 <a href="#book" class="nav-link nav-cta">Book a Lesson</a>
             </nav>
         </div>
